@@ -1,0 +1,383 @@
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fafc;
+    color: #111827;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2563eb;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= DROPDOWN MENU ================= */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    z-index: 1001;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: dropdownFade 0.3s ease;
+}
+
+.dropdown-content li a {
+    color: #111827;
+    padding: 12px 20px;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.8), rgba(6, 182, 212, 0.8)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 { font-size: 60px; }
+.hero p { font-size: 18px; margin: 15px 0 25px; }
+
+.hero button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ================= SERVICES & FEATURES ================= */
+.services, .features {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.services h2, .features h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Restored Gradient Underline */
+.services h2::after, .features h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.services-container, .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card, .card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover, .card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= ABOUT PAGE SPECIFIC ================= */
+.about-hero { height: 60vh !important; }
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 60px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text { flex: 1; }
+.about-text h2 { font-size: 36px; margin-bottom: 20px; }
+.about-text p { font-size: 18px; line-height: 1.8; color: #4b5563; }
+
+.about-image { flex: 1; }
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-cards { padding: 80px 60px; background: #f1f5f9; }
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 60px;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.stat-box h2 { font-size: 48px; color: #06b6d4; }
+
+/* ================= CONTACT PAGE SPECIFIC ================= */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.85), rgba(6, 182, 212, 0.85)),
+    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c');
+    background-size: cover;
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 50px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* Send Message Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, #6366f1, #06b6d4);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
+}
+
+/* ================= MULTI-COLUMN FOOTER ================= */
+.main-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 80px 60px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+.brand-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #06b6d4;
+    padding-left: 5px;
+}
+
+/* Subscribe Box in Footer */
+.subscribe-box {
+    display: flex;
+    background: #1e293b;
+    border-radius: 50px;
+    padding: 5px;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.subscribe-box input {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    flex: 1;
+    outline: none;
+}
+
+.subscribe-btn {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 40px 0 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
+    header { flex-direction: column; padding: 20px; }
+    nav ul { margin-top: 15px; }
+    .about-container { flex-direction: column; text-align: center; }
+    .footer-container { flex-direction: column; }
+    .stats { flex-direction: column; gap: 30px; }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - LearnHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">LearnHub</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="index.html#services">Services ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Python Programming</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Cloud Computing</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form class="contact-form" onsubmit="return validateForm()">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column brand-section">
+            <h2 class="footer-logo">LearnHub</h2>
+            <p>Learn modern tech skills easily. Step-by-step guidance from experts.</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Your Email Address">
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Menu</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy & Cookies</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <p>123 Tech Lane, Innovation City, Cyprus</p>
+            <p>P: +0 (555) 123 45 67</p>
+            <p>E: info@learnhub.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Social Media</h3>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <hr class="footer-divider">
+        <p>© 2026 LearnHub. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
